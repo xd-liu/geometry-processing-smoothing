@@ -355,7 +355,7 @@ $$
 
 where $h\_i$ is the height of the triangle treating $\mathbf{e}\_i$ as base, and
 likewise for $h\_j$. Rewriting the equation above, replacing one of the edge norms,
-e.g.\ $||\mathbf{e}\_i||$:
+e.g. $||\mathbf{e}\_i||$:
 
 $$
 -\frac{||\mathbf{e}\_j||}{2A} \frac{\frac{h\_j}{\sin{\alpha}\_{ij}}}{2A} \cos {\alpha}\_{ij}.
