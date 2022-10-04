@@ -335,17 +335,20 @@ $$
 
 Now notice that the angle between $\mathbf{e}\_i$ and $\mathbf{e}\_j$, call it ${\alpha}\_{ij}$,
 is ${\pi} - {\theta}$, but more importantly that:
+
 $$
 \cos {\theta} = - \cos \left({\pi} - {\theta}\right) = -\cos {\alpha}\_{ij}.
 $$
 
 So, we can rewrite equation the cosine law equation above into:
+
 $$
 -\frac{||\mathbf{e}\_j||}{2A}\frac{||\mathbf{e}\_i||}{2A} \cos 
 {\alpha}\_{ij}.
 $$
 
 Now, apply the definition of sine for right triangles:
+
 $$
 \sin {\alpha}\_{ij} = \frac{h\_j}{||\mathbf{e}\_i||} = \frac{h\_i}{||\mathbf{e}\_j||},
 $$
@@ -353,12 +356,14 @@ $$
 where $h\_i$ is the height of the triangle treating $\mathbf{e}\_i$ as base, and
 likewise for $h\_j$. Rewriting the equation above, replacing one of the edge norms,
 e.g.\ $||\mathbf{e}\_i||$:
+
 $$
 -\frac{||\mathbf{e}\_j||}{2A} \frac{\frac{h\_j}{\sin{\alpha}\_{ij}}}{2A} \cos {\alpha}\_{ij}.
 $$
 
 
 Combine the cosine and sine terms:
+
 $$
 -\frac{||\mathbf{e}\_j||}{2A} \frac{h\_j}{2A} \cot {\alpha}\_{ij}.
 $$
@@ -366,6 +371,7 @@ $$
 
 Finally, since $||\mathbf{e}\_j||h\_j=2A$, our constant dot product of these
 gradients in our triangle is:
+
 $$
 {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j = -\frac{\cot {\alpha}\_{ij}}{2A}.
 $$
@@ -374,6 +380,7 @@ $$
 Similarly, inside the other triangle $T\_{\beta}$ incident
 on nodes $i$ and $j$ with angle ${\beta}\_{ij}$ we have a constant dot
 product:
+
 $$
 {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j = -\frac{\cot {\beta}\_{ij}}{2B},
 $$
@@ -383,6 +390,7 @@ where $B$ is the area $T\_{\beta}$.
 Recall that ${\varphi}\_i$ and ${\varphi}\_j$ are only both nonzero inside these two
 triangles, $T\_{\alpha}$ and $T\_{\beta}$.  So, since these constants are inside an
 integral over area  we may write:
+
 $$
 \int\limits\_\mathbf{S} {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \\, dA = 
 \left.A{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\alpha}} + \left.B{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\beta}}
