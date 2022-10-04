@@ -550,9 +550,9 @@ Construct the "cotangent Laplacian" for a mesh with edge lengths `l`. Each
 entry in the output sparse, symmetric matrix `L` is given by:
 
 $$
-L_{ij} = \begin{cases}
-         \frac12  \cot{{\alpha}_{ij}} + \frac12  \cot{{\beta}_{ij}}  & \text{if edge $ij$ exists} \\
-         - {\sum}_{j\ne i} L_{ij}                   & \text{if $i = j$} \\
+L\_{ij} = \begin{cases}
+         \frac12  \cot{{\alpha}\_{ij}} + \frac12  \cot{{\beta}\_{ij}}  & \text{if edge $ij$ exists} \\
+         - {\sum}\_{j\ne i} L\_{ij}                   & \text{if $i = j$} \\
          0                                & \text{otherwise}
          \end{cases}
 $$
