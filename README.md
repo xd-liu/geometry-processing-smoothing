@@ -162,7 +162,7 @@ where we observe that ${\phi}$ is quadratic in ${\epsilon}$.
 Since $E(w)$ is minimal then ${\phi}$ is minimized when ${\epsilon}$ is zero, and if ${\phi}$ is
 minimal at ${\epsilon}=0$, then the derivative of ${\phi}$ with respect ${\epsilon}$ must be zero:
 
-$
+$$
 \begin{align*}
 0 & = \left.\frac{\partial {\phi}}{\partial {\epsilon}} \right|\_{{\epsilon} = 0},\\
   & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} ( (f-w-{\epsilon}v)^{2} + {\lambda} \| {\nabla}w + {\epsilon}{\nabla}v\| ^{2})\;dA, \right|\_{{\epsilon} = 0} \\
@@ -171,7 +171,7 @@ $
   & = \left.\int \_\mathbf{S} (-fv + vw +2{\epsilon}vw  + {\lambda}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}\| {\nabla}w\| ^{2}) \;dA \right|\_{{\epsilon} = 0}\\
   & = \int \_\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w )\;dA.
 \end{align*}
-$
+$$
 
 
 The choice of "test" function $v$ was arbitrary, so this must hold for any
