@@ -122,10 +122,7 @@ then we want to find a signal $u$ such that it simultaneously minimizes its
 difference with $f$ and minimizes its variation over the surface:
 
 $$
-u^\* 
-  = \mathop{\text{argmin}}\_u E\_(u) 
-  = 
-  \mathop{\text{argmin}}\_u \frac12 \int \_\mathbf{S} ( \underbrace{(f-u)^{2}}\_\text{data} + 
+u^\* = \mathop{\text{argmin}}\_u E\_(u) = \mathop{\text{argmin}}\_u \frac12 \int \_\mathbf{S} ( \underbrace{(f-u)^{2}}\_\text{data} + 
   \underbrace{{\lambda}\| {\nabla}u\| ^{2}}\_\text{smoothness} )\;dA,
 $$
 
