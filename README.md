@@ -77,7 +77,7 @@ our surface $\mathbf{x} \in  \mathbf{S}$ should be equal to
 the average value of the ball:
 
 $$
-|B(\mathbf{x})| u(\mathbf{x}) = \frac{1}{|B(\mathbf{x}))|} \int _{B(\mathbf{x})} f(\mathbf{z}) \, d\mathbf{z},
+|B(\mathbf{x})| u(\mathbf{x}) = \frac{1}{|B(\mathbf{x}))|} \int _{B(\mathbf{x})} f(\mathbf{z}) \\, d\mathbf{z},
 $$
 
 
@@ -86,7 +86,7 @@ times to see a global smoothing effect. Hence, we can write that the current
 value $u^t$ _flows_ toward smooth solution by small steps ${\delta}t$ in time:
 
 $$
-|B(\mathbf{x})| u^{t+{\delta}t}(\mathbf{x}) = \frac{1}{|B(\mathbf{x}))|} \int _{B(\mathbf{x})} u^t(\mathbf{z}) \, d\mathbf{z}.
+|B(\mathbf{x})| u^{t+{\delta}t}(\mathbf{x}) = \frac{1}{|B(\mathbf{x}))|} \int _{B(\mathbf{x})} u^t(\mathbf{z}) \\, d\mathbf{z}.
 $$
 
 
@@ -96,7 +96,7 @@ describing the change in value as an integral of relative values:
 
 $$
 \frac{\partial  u}{\partial  t} 
-  = {\lambda} \frac{1}{|B(\mathbf{x}))|^2} \int _{B(\mathbf{x})} (u(\mathbf{z})-u(\mathbf{x})) \, d\mathbf{z}.
+  = {\lambda} \frac{1}{|B(\mathbf{x}))|^2} \int _{B(\mathbf{x})} (u(\mathbf{z})-u(\mathbf{x})) \\, d\mathbf{z}.
 $$
 
 
@@ -108,7 +108,7 @@ of the $u$, so we have arrived at our flow equation:
 
 $$
 \frac{\partial  u}{\partial  t} 
-  = \lim_{|B(\mathbf{x})| \rightarrow  0}  {\lambda} \frac{1}{|B(\mathbf{x}))|^2} \int _{B(\mathbf{x})} (u(\mathbf{z})-u(\mathbf{x})) \, d\mathbf{z} 
+  = \lim_{|B(\mathbf{x})| \rightarrow  0}  {\lambda} \frac{1}{|B(\mathbf{x}))|^2} \int _{B(\mathbf{x})} (u(\mathbf{z})-u(\mathbf{x})) \\, d\mathbf{z} 
   = {\lambda} \Delta  u.
 $$
 
@@ -123,7 +123,7 @@ difference with $f$ and minimizes its variation over the surface:
 
 $$
 u^\* = \mathop{\text{argmin}}\_u E\_(u) = \mathop{\text{argmin}}\_u \frac12 \int \_\mathbf{S} ( \underbrace{(f-u)^{2}}\_\text{data} + 
-  \underbrace{{\lambda}|| {\nabla}u|| ^{2}}\_\text{smoothness} )\, dA,
+  \underbrace{{\lambda}|| {\nabla}u|| ^{2}}\_\text{smoothness} )\\, dA,
 $$
 
 
@@ -154,7 +154,7 @@ are given another arbitrary function $v$, then let us define a function new
 function 
 
 $$
-{\phi}({\epsilon}) = E(w+{\epsilon}v) = \frac12 \int _\mathbf{S} ((f-w+{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})  \, dA,
+{\phi}({\epsilon}) = E(w+{\epsilon}v) = \frac12 \int _\mathbf{S} ((f-w+{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})  \\, dA,
 $$
 
 where we observe that ${\phi}$ is quadratic in ${\epsilon}$.
@@ -165,11 +165,11 @@ minimal at ${\epsilon}=0$, then the derivative of ${\phi}$ with respect ${\epsil
 $$
 \begin{align*}
 0 & = \left.\frac{\partial {\phi}}{\partial {\epsilon}} \right|\_{{\epsilon} = 0},\\
-  & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} ( (f-w-{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})\, dA, \right|\_{{\epsilon} = 0} \\
+  & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} ( (f-w-{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})\\, dA, \right|\_{{\epsilon} = 0} \\
   & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} (
-    f^2 - 2wf - 2{\epsilon}fv +w^{2}+2{\epsilon}vw +{\epsilon}^{2}v^{2} + {\lambda} || {\nabla}w|| ^{2} + {\lambda}2{\epsilon}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}^{2}|| {\nabla}w|| ^{2}) \, dA \right|\_{{\epsilon} = 0}\\
-  & = \left.\int \_\mathbf{S} (-fv + vw +2{\epsilon}vw  + {\lambda}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}|| {\nabla}w|| ^{2}) \, dA \right|\_{{\epsilon} = 0}\\
-  & = \int \_\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w )\, dA.
+    f^2 - 2wf - 2{\epsilon}fv +w^{2}+2{\epsilon}vw +{\epsilon}^{2}v^{2} + {\lambda} || {\nabla}w|| ^{2} + {\lambda}2{\epsilon}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}^{2}|| {\nabla}w|| ^{2}) \\, dA \right|\_{{\epsilon} = 0}\\
+  & = \left.\int \_\mathbf{S} (-fv + vw +2{\epsilon}vw  + {\lambda}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}|| {\nabla}w|| ^{2}) \\, dA \right|\_{{\epsilon} = 0}\\
+  & = \int \_\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w )\\, dA.
 \end{align*}
 $$
 
@@ -178,7 +178,7 @@ The choice of "test" function $v$ was arbitrary, so this must hold for any
 (reasonable) choice of $v$:
 
 $$
-0 = \int _\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w) \, dA \quad \forall  v.
+0 = \int _\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w) \\, dA \quad \forall  v.
 $$
 
 
@@ -188,7 +188,7 @@ $w$ by applying [Green's first
 identity](https://en.wikipedia.org/wiki/Green's_identities):
 
 $$
-0 = \int _\mathbf{S} (v(w-f)  - {\lambda}v\Delta w )\, dA \quad (+  \text{boundary term} )\quad \forall  v,
+0 = \int _\mathbf{S} (v(w-f)  - {\lambda}v\Delta w )\\, dA \quad (+  \text{boundary term} )\quad \forall  v,
 $$
 
 where we choose to _ignore_ the boundary terms (for now) or equivalently we
@@ -287,11 +287,11 @@ energy that is quadratic in the values at each mesh vertex:
 
 $$
 \begin{align*}
-\int \_\mathbf{S}  || {\nabla}u(\mathbf{x})|| ^{2} \, dA  
-&= \int \_\mathbf{S}  \||{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\||^2 \, dA  \\
-&= \int \_\mathbf{S}  \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)\cdot \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)  \, dA  \\
-&= \int \_\mathbf{S} {\sum}\_{i=1}^n {\sum}\_{j=1}^n {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j u\_i u\_j \, dA \\
-&= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L\_{ij} =  \int \_\mathbf{S}  {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j \, dA.
+\int \_\mathbf{S}  || {\nabla}u(\mathbf{x})|| ^{2} \\, dA  
+&= \int \_\mathbf{S}  \||{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\||^2 \\, dA  \\
+&= \int \_\mathbf{S}  \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)\cdot \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)  \\, dA  \\
+&= \int \_\mathbf{S} {\sum}\_{i=1}^n {\sum}\_{j=1}^n {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j u\_i u\_j \\, dA \\
+&= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L\_{ij} =  \int \_\mathbf{S}  {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j \\, dA.
 \end{align*}
 $$
 
@@ -384,7 +384,7 @@ Recall that ${\varphi}\_i$ and ${\varphi}\_j$ are only both nonzero inside these
 triangles, $T\_{\alpha}$ and $T\_{\beta}$.  So, since these constants are inside an
 integral over area  we may write:
 $$
-\int\limits\_\mathbf{S} {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \, dA = 
+\int\limits\_\mathbf{S} {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \\, dA = 
 \left.A{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\alpha}} + \left.B{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\beta}}
 =
 -\frac{1}{2} \left( \cot {\alpha}\_{ij} + \cot {\beta}\_{ij} \right).
@@ -400,8 +400,8 @@ not an issue. If we used a similar FEM derivation for the _data term_ we would
 get another sparse matrix $\mathbf{M} \in  \mathbb{R}^{n \times  n}$:
 
 $$
-\int _\mathbf{S} (u-f)^{2} \, dA 
-  = \int _\mathbf{S} {\sum}_{i=1}^n {\sum}_{j=1}^n {\varphi}_i\cdot {\varphi}_j (u_i-f_i) (u_j-f_j) \, dA =
+\int _\mathbf{S} (u-f)^{2} \\, dA 
+  = \int _\mathbf{S} {\sum}_{i=1}^n {\sum}_{j=1}^n {\varphi}_i\cdot {\varphi}_j (u_i-f_i) (u_j-f_j) \\, dA =
   (\mathbf{u}-\mathbf{f})^{\mathsf T} \mathbf{M} (\mathbf{u}-\mathbf{f}),
 $$
 
