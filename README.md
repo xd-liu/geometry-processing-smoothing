@@ -267,17 +267,17 @@ Any piecewise-linear function can be expressed as a sum of values at mesh
 vertices times corresponding piecewise-linear basis functions  (a.k.a hat
 functions, ${\varphi}_i$):
 
-
+$$
 \begin{align*}
-u(\mathbf{x}) &= {\sum}_{i=1}^n u_i {\varphi}_i(\mathbf{x}), \\
+u(\mathbf{x}) &= {\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x}), \\
 {\varphi}(\mathbf{x}) &= \begin{cases}
-  1 & \text{if $\mathbf{x} = \mathbf{v}_i$}, \\
-  \frac{\text{Area($\mathbf{x}$,$\mathbf{v}_j$,$\mathbf{v}_k$)}}{\text{Area($\mathbf{v}_i$,$\mathbf{v}_j$,$\mathbf{v}_k$)}} 
+  1 & \text{if $\mathbf{x} = \mathbf{v}\_i$}, \\
+  \frac{\text{Area($\mathbf{x}$,$\mathbf{v}\_j$,$\mathbf{v}\_k$)}}{\text{Area($\mathbf{v}\_i$,$\mathbf{v}\_j$,$\mathbf{v}\_k$)}} 
     & \text{if $\mathbf{x} \in  \text{triangle}(i,j,k)$}, \\
   0 & \text{otherwise}.
 \end{cases}
 \end{align*}
-
+$$
 
 
 ![](images/hat-function.png)
@@ -285,15 +285,15 @@ u(\mathbf{x}) &= {\sum}_{i=1}^n u_i {\varphi}_i(\mathbf{x}), \\
 By plugging this definition into our smoothness energy above, we have discrete
 energy that is quadratic in the values at each mesh vertex:
 
-
+$$
 \begin{align*}
-\int _\mathbf{S}  \| {\nabla}u(\mathbf{x})\| ^{2} \;dA  
-&= \int _\mathbf{S}  \left\|{\nabla}\left({\sum}_{i=1}^n u_i {\varphi}_i(\mathbf{x})\right)\right\|^2 \;dA  \\
-&= \int _\mathbf{S}  \left({\sum}_{i=1}^n u_i {\nabla}{\varphi}_i(\mathbf{x})\right)\cdot \left({\sum}_{i=1}^n u_i {\nabla}{\varphi}_i(\mathbf{x})\right)  \;dA  \\
-&= \int _\mathbf{S} {\sum}_{i=1}^n {\sum}_{j=1}^n {\nabla}{\varphi}_i\cdot {\nabla}{\varphi}_j u_i u_j \;dA \\
-&= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L_{ij} =  \int _\mathbf{S}  {\nabla}{\varphi}_i\cdot {\nabla}{\varphi}_j \;dA.
+\int \_\mathbf{S}  \| {\nabla}u(\mathbf{x})\| ^{2} \;dA  
+&= \int \_\mathbf{S}  \left\|{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\right\|^2 \;dA  \\
+&= \int \_\mathbf{S}  \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)\cdot \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)  \;dA  \\
+&= \int \_\mathbf{S} {\sum}\_{i=1}^n {\sum}\_{j=1}^n {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j u\_i u\_j \;dA \\
+&= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L\_{ij} =  \int \_\mathbf{S}  {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j \;dA.
 \end{align*}
-
+$$
 
 
 By defining ${\varphi}_i$ as piecewise-linear hat functions, the values in the system
