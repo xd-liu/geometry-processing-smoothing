@@ -296,8 +296,8 @@ $$
 $$
 
 
-By defining ${\varphi}_i$ as piecewise-linear hat functions, the values in the system
-matrix $L_{ij}$ are uniquely determined by the geometry of the underlying mesh.
+By defining ${\varphi}\_i$ as piecewise-linear hat functions, the values in the system
+matrix $L\_{ij}$ are uniquely determined by the geometry of the underlying mesh.
 These values are famously known as _cotangent weights_. "Cotangent"
 because, as we will shortly see, of their trigonometric formulae and "weights"
 because as a matrix $\mathbf{L}$ they define a weighted [graph
