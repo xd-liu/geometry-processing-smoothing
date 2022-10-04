@@ -288,7 +288,7 @@ energy that is quadratic in the values at each mesh vertex:
 $$
 \begin{align*}
 \int \_\mathbf{S}  || {\nabla}u(\mathbf{x})|| ^{2} \;dA  
-&= \int \_\mathbf{S}  \left||{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\right||^2 \;dA  \\
+&= \int \_\mathbf{S}  \||{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\||^2 \;dA  \\
 &= \int \_\mathbf{S}  \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)\cdot \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)  \;dA  \\
 &= \int \_\mathbf{S} {\sum}\_{i=1}^n {\sum}\_{j=1}^n {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j u\_i u\_j \;dA \\
 &= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L\_{ij} =  \int \_\mathbf{S}  {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j \;dA.
