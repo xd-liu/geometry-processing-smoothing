@@ -123,7 +123,7 @@ difference with $f$ and minimizes its variation over the surface:
 
 $$
 u^\* = \mathop{\text{argmin}}\_u E\_(u) = \mathop{\text{argmin}}\_u \frac12 \int \_\mathbf{S} ( \underbrace{(f-u)^{2}}\_\text{data} + 
-  \underbrace{{\lambda}\| {\nabla}u\| ^{2}}\_\text{smoothness} )\;dA,
+  \underbrace{{\lambda}|| {\nabla}u|| ^{2}}\_\text{smoothness} )\;dA,
 $$
 
 
@@ -154,7 +154,7 @@ are given another arbitrary function $v$, then let us define a function new
 function 
 
 $$
-{\phi}({\epsilon}) = E(w+{\epsilon}v) = \frac12 \int _\mathbf{S} ((f-w+{\epsilon}v)^{2} + {\lambda} \| {\nabla}w + {\epsilon}{\nabla}v\| ^{2})  \;dA,
+{\phi}({\epsilon}) = E(w+{\epsilon}v) = \frac12 \int _\mathbf{S} ((f-w+{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})  \;dA,
 $$
 
 where we observe that ${\phi}$ is quadratic in ${\epsilon}$.
@@ -165,10 +165,10 @@ minimal at ${\epsilon}=0$, then the derivative of ${\phi}$ with respect ${\epsil
 $$
 \begin{align*}
 0 & = \left.\frac{\partial {\phi}}{\partial {\epsilon}} \right|\_{{\epsilon} = 0},\\
-  & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} ( (f-w-{\epsilon}v)^{2} + {\lambda} \| {\nabla}w + {\epsilon}{\nabla}v\| ^{2})\;dA, \right|\_{{\epsilon} = 0} \\
+  & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} ( (f-w-{\epsilon}v)^{2} + {\lambda} || {\nabla}w + {\epsilon}{\nabla}v|| ^{2})\;dA, \right|\_{{\epsilon} = 0} \\
   & = \left.\frac{\partial }{\partial {\epsilon}} \frac12 \int \_\mathbf{S} (
-    f^2 - 2wf - 2{\epsilon}fv +w^{2}+2{\epsilon}vw +{\epsilon}^{2}v^{2} + {\lambda} \| {\nabla}w\| ^{2} + {\lambda}2{\epsilon}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}^{2}\| {\nabla}w\| ^{2}) \;dA \right|\_{{\epsilon} = 0}\\
-  & = \left.\int \_\mathbf{S} (-fv + vw +2{\epsilon}vw  + {\lambda}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}\| {\nabla}w\| ^{2}) \;dA \right|\_{{\epsilon} = 0}\\
+    f^2 - 2wf - 2{\epsilon}fv +w^{2}+2{\epsilon}vw +{\epsilon}^{2}v^{2} + {\lambda} || {\nabla}w|| ^{2} + {\lambda}2{\epsilon}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}^{2}|| {\nabla}w|| ^{2}) \;dA \right|\_{{\epsilon} = 0}\\
+  & = \left.\int \_\mathbf{S} (-fv + vw +2{\epsilon}vw  + {\lambda}{\nabla}v\cdot {\nabla}w + {\lambda} {\epsilon}|| {\nabla}w|| ^{2}) \;dA \right|\_{{\epsilon} = 0}\\
   & = \int \_\mathbf{S} (v(w-f)  + {\lambda}{\nabla}v\cdot {\nabla}w )\;dA.
 \end{align*}
 $$
@@ -287,8 +287,8 @@ energy that is quadratic in the values at each mesh vertex:
 
 $$
 \begin{align*}
-\int \_\mathbf{S}  \| {\nabla}u(\mathbf{x})\| ^{2} \;dA  
-&= \int \_\mathbf{S}  \left\|{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\right\|^2 \;dA  \\
+\int \_\mathbf{S}  || {\nabla}u(\mathbf{x})|| ^{2} \;dA  
+&= \int \_\mathbf{S}  \left||{\nabla}\left({\sum}\_{i=1}^n u\_i {\varphi}\_i(\mathbf{x})\right)\right||^2 \;dA  \\
 &= \int \_\mathbf{S}  \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)\cdot \left({\sum}\_{i=1}^n u\_i {\nabla}{\varphi}\_i(\mathbf{x})\right)  \;dA  \\
 &= \int \_\mathbf{S} {\sum}\_{i=1}^n {\sum}\_{j=1}^n {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j u\_i u\_j \;dA \\
 &= \mathbf{u}^{\mathsf T} \mathbf{L} \mathbf{u}, \quad \text{where } L\_{ij} =  \int \_\mathbf{S}  {\nabla}{\varphi}\_i\cdot {\nabla}{\varphi}\_j \;dA.
@@ -315,7 +315,7 @@ perpendicularly from the opposite edge $e_i$ with inverse magnitude equal to
 the height $h$ of the triangle treating that opposite edge as base:
 
 $$
-\|{\nabla}{\varphi}_i\| = \frac{1}{h} = \frac{\|\mathbf{e}_i\|}{2A},
+||{\nabla}{\varphi}_i|| = \frac{1}{h} = \frac{||\mathbf{e}_i||}{2A},
 $$
 
 where $\mathbf{e}_i$ is the edge $e_i$ as a vector and $A$ is the area of the triangle.
@@ -331,8 +331,8 @@ likewise ${\nabla} {\varphi}_j$ points toward node $j$ perpendicular to $\mathbf
 formed between these two vectors ${\theta}$. So we may write:
 
 $$
-{\nabla} {\varphi}_i \cdot  {\nabla} {\varphi}_j = \|{\nabla} {\varphi}_i\| \|{\nabla} {\varphi}_j\| \cos {\theta} =
-\frac{\|\mathbf{e}_j\|}{2A}\frac{\|\mathbf{e}_i\|}{2A} \cos {\theta}. 
+{\nabla} {\varphi}_i \cdot  {\nabla} {\varphi}_j = ||{\nabla} {\varphi}_i|| ||{\nabla} {\varphi}_j|| \cos {\theta} =
+\frac{||\mathbf{e}_j||}{2A}\frac{||\mathbf{e}_i||}{2A} \cos {\theta}. 
 $$
 
 
@@ -344,30 +344,30 @@ $$
 
 So, we can rewrite equation the cosine law equation above into:
 $$
--\frac{\|\mathbf{e}_j\|}{2A}\frac{\|\mathbf{e}_i\|}{2A} \cos 
+-\frac{||\mathbf{e}_j||}{2A}\frac{||\mathbf{e}_i||}{2A} \cos 
 {\alpha}_{ij}.
 $$
 
 Now, apply the definition of sine for right triangles:
 $$
-\sin {\alpha}_{ij} = \frac{h_j}{\|\mathbf{e}_i\|} = \frac{h_i}{\|\mathbf{e}_j\|},
+\sin {\alpha}_{ij} = \frac{h_j}{||\mathbf{e}_i||} = \frac{h_i}{||\mathbf{e}_j||},
 $$
 
 where $h_i$ is the height of the triangle treating $\mathbf{e}_i$ as base, and
 likewise for $h_j$. Rewriting the equation above, replacing one of the edge norms,
-e.g.\ $\|\mathbf{e}_i\|$:
+e.g.\ $||\mathbf{e}_i||$:
 $$
--\frac{\|\mathbf{e}_j\|}{2A} \frac{\frac{h_j}{\sin{\alpha}_{ij}}}{2A} \cos {\alpha}_{ij}.
+-\frac{||\mathbf{e}_j||}{2A} \frac{\frac{h_j}{\sin{\alpha}_{ij}}}{2A} \cos {\alpha}_{ij}.
 $$
 
 
 Combine the cosine and sine terms:
 $$
--\frac{\|\mathbf{e}_j\|}{2A} \frac{h_j}{2A} \cot {\alpha}_{ij}.
+-\frac{||\mathbf{e}_j||}{2A} \frac{h_j}{2A} \cot {\alpha}_{ij}.
 $$
 
 
-Finally, since $\|\mathbf{e}_j\|h_j=2A$, our constant dot product of these
+Finally, since $||\mathbf{e}_j||h_j=2A$, our constant dot product of these
 gradients in our triangle is:
 $$
 {\nabla} {\varphi}_i \cdot  {\nabla} {\varphi}_j = -\frac{\cot {\alpha}_{ij}}{2A}.
