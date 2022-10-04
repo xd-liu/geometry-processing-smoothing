@@ -309,21 +309,18 @@ a point of controversy in geometry processing research (see "Discrete laplace
 operators: no free lunch" [Wardetzky et al. 2007]).
 
 
-We first notice that ${\nabla}{\varphi}_i$ are constant on each triangle, and only nonzero on
-triangles incident on node $i$. For such a triangle, $T_{\alpha}$, this ${\nabla}{\varphi}_i$ points
-perpendicularly from the opposite edge $e_i$ with inverse magnitude equal to
+We first notice that ${\nabla}{\varphi}\_i$ are constant on each triangle, and only nonzero on
+triangles incident on node $i$. For such a triangle, $T\_{\alpha}$, this ${\nabla}{\varphi}\_i$ points
+perpendicularly from the opposite edge $e\_i$ with inverse magnitude equal to
 the height $h$ of the triangle treating that opposite edge as base:
 
 $$
-||{\nabla}{\varphi}_i|| = \frac{1}{h} = \frac{||\mathbf{e}_i||}{2A},
+||{\nabla}{\varphi}\_i|| = \frac{1}{h} = \frac{||\mathbf{e}\_i||}{2A},
 $$
 
-where $\mathbf{e}_i$ is the edge $e_i$ as a vector and $A$ is the area of the triangle.
+where $\mathbf{e}\_i$ is the edge $e\_i$ as a vector and $A$ is the area of the triangle.
 
-![Left: the gradient ${\nabla} {\varphi}_i$ of a hat function ${\varphi}_i$ is piecewise-constant and
-points perpendicular to opposite edges. Right: hat function gradients ${\nabla} {\varphi}_i$
-and ${\nabla} {\varphi}_j$ of neighboring nodes meet at angle ${\theta} = {\pi} -
-{\alpha}_{ij}$.](images/hat-function-gradient.png)
+![](images/hat-function-gradient.png)
 
 Now, consider two neighboring nodes $i$ and $j$, connected by some edge
 $\mathbf{e}_{ij}$. Then ${\nabla}{\varphi}_i$ points toward node $i$ perpendicular to $\mathbf{e}_i$ and
