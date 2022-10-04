@@ -230,7 +230,7 @@ operators.
 ## Discrete Laplacian
 
 There are many ways to derive a discrete
-approximation of the Laplacian $\Delta $ operator on a triangle mesh using:
+approximation of the Laplacian $\Delta$ operator on a triangle mesh using:
 
  - [finite volume method](https://en.wikipedia.org/wiki/Finite_volume_method),
     - "The solution of partial differential equations by means of electrical
