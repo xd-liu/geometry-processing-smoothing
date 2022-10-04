@@ -249,7 +249,7 @@ approximation of the Laplacian $\Delta$ operator on a triangle mesh using:
     - _Discrete Exterior Calculus_ [Hirani 2003, pp. 69]
     - _Discrete Differential Geometry: An Applied Introduction_ [Crane 2013,
       pp. 71]
- - [gradient of surface area \Rightarrow  mean curvature
+ - [gradient of surface area $\Rightarrow$  mean curvature
    flow](https://en.wikipedia.org/wiki/Mean_curvature_flow)
     - "Computing Discrete Minimal Surfaces and Their Conjugates" [Pinkall &
       Polthier 1993]
