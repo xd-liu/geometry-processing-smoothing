@@ -392,10 +392,7 @@ triangles, $T\_{\alpha}$ and $T\_{\beta}$.  So, since these constants are inside
 integral over area  we may write:
 
 $$
-\int\limits\_\mathbf{S} {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \\, dA = 
-\left.A{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\alpha}} + \left.B{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\beta}}
-=
--\frac{1}{2} \left( \cot {\alpha}\_{ij} + \cot {\beta}\_{ij} \right).
+\int\limits\_\mathbf{S} {\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \\, dA = \left.A{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\alpha}} + \left.B{\nabla} {\varphi}\_i \cdot  {\nabla} {\varphi}\_j \right|\_{T\_{\beta}} = -\frac{1}{2} \left( \cot {\alpha}\_{ij} + \cot {\beta}\_{ij} \right).
 $$
 
 
